@@ -1,8 +1,16 @@
+import TextBox from "../components/TextBox"
+import SelectCourse from "../components/SelectCourse"
+import SaveAndBackButtons from "../components/SaveAndBackButtons"
+
 function AddNotesPage() {
   return (
-    <div>
-      Add notes here
-    </div>
+    <>
+      Add new notes here
+
+      <SelectCourse />
+      <TextBox />
+      <SaveAndBackButtons />
+    </>
   )
 }
 
