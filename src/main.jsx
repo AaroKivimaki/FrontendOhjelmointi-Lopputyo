@@ -7,22 +7,23 @@ import ListNotesPage from './pages/ListNotesPage.jsx'
 import AddCoursesPage from './pages/AddCoursesPage.jsx'
 import { createBrowserRouter, RouterProvider } from 'react-router'
 
+
 const router = createBrowserRouter([
   {
     path: "/",
-    Component: App
+    element: <App />
   },
   {
     path: "/CreateNotes",
-    Component: AddNotesPage
+    element: <AddNotesPage />
   },
   {
     path: "/ListNotes",
-    Component: ListNotesPage
+    element: <ListNotesPage />
   },
   {
     path: "/AddCourses",
-    Component: AddCoursesPage
+    element: <AddCoursesPage />
   }
 ])
 

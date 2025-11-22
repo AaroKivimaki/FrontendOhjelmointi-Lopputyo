@@ -1,6 +1,6 @@
 import { useState } from "react"
 
-function MakeNewCourses() {
+function MakeNewCourses({ getCourses }) {
   const [courses, setCourses] = useState({})
 
   const addText = (e) => {
@@ -15,7 +15,7 @@ function MakeNewCourses() {
     <>
       <label htmlFor="course">Add a new course here:</label>
       <input type="" name="course" onChange={addText} />
-      <button type="" onClick={saveCourse}>Save</button>
+      <button type="" onClick={() => getCourses(courses)} >Save</button>
     </>
   )
 }
