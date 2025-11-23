@@ -1,12 +1,13 @@
 import { Link } from "react-router"
+import { useState } from "react"
 
 function LandingPage() {
-  // const [courses, setCourses] = useState({})
+  const [courses, setCourses] = useState({})
 
-  // function getCourses(courses) {
-  //   console.log("Parent", courses)
-  //   setCourses(courses)
-  // }
+  function getCourses(courses) {
+    console.log("Parent", courses)
+    setCourses(courses)
+  }
 
   return (
     <>
