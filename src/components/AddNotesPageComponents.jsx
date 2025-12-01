@@ -1,6 +1,6 @@
-import { Link } from "react-router"
 import { useState, useEffect, useContext } from "react"
 import { courseContext } from "./Context"
+import BackButton from "./backButton"
 
 function AddNotesPageComponents() {
   const [text, setText] = useState("")
@@ -38,7 +38,7 @@ function AddNotesPageComponents() {
       </select>
       <textarea name="notes" rows="7" cols="35" value={text} placeholder="Start writing notes here" onChange={saveNotes}></textarea>
       <button type="" onClick={saveOnClick}>Save</button>
-      <button type=""><Link to={"/"}>Back</Link></button>
+      <BackButton />
     </>
   )
 }

@@ -4,6 +4,7 @@ export const courseContext = createContext()
 
 export function CourseProvider({ children }) {
   const [courses, setCourses] = useState([])
+  const [notes, setNotes] = useState([])
   const [id, setId] = useState(4)
   const [hasFetched, setHasFetched] = useState(false)
   const [firstOrNotCourse, setFirstOrNotCourse] = useState(false)
@@ -13,8 +14,11 @@ export function CourseProvider({ children }) {
       ...previousCourses,
       { id: id, name: course }
     ])
-
     setId(id + 1)
+  }
+
+  const importNotesData = (notes) => {
+    setNotes(prev => [...prev, ...notes])
   }
 
   const importCourseData = (course) => {
@@ -22,7 +26,10 @@ export function CourseProvider({ children }) {
   }
 
   return (
-    <courseContext.Provider value={{ courses, addCourse, importCourseData, hasFetched, setHasFetched, firstOrNotCourse, setFirstOrNotCourse }}>
+    <courseContext.Provider value={{
+      courses, addCourse, importCourseData, importNotesData, hasFetched, setHasFetched,
+      firstOrNotCourse, setFirstOrNotCourse, notes, setNotes
+    }}>
       {children}
     </courseContext.Provider>
   )
