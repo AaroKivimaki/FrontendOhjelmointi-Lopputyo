@@ -1,13 +1,13 @@
-import SelectCourse from "../components/SelectCourse"
-import SaveAndBackButtons from "../components/SaveAndBackButtons"
+import AddNotesPageComponents from "../components/AddNotesPageComponents"
+import { useState } from "react"
 
 function AddNotesPage() {
+  const [dataFetched, setDataFetched] = useState(false)
+
   return (
     <>
       Add new notes here
-
-      <SelectCourse />
-      <SaveAndBackButtons />
+      <AddNotesPageComponents dataFetched={dataFetched} setDataFetched={setDataFetched} />
     </>
   )
 }

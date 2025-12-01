@@ -1,19 +1,18 @@
 import { Link } from "react-router"
-import { useState } from "react"
+import { courseContext } from "../components/Context"
+import { useContext } from "react"
 
 function LandingPage() {
-  const [courses, setCourses] = useState({})
-
-  function getCourses(courses) {
-    console.log("Parent", courses)
-    setCourses(courses)
-  }
+  const { courses, firstOrNotCourse } = useContext(courseContext)
 
   return (
     <>
-      <button><Link to="/CreateNotes">Create notes</Link></button>
+      <button><Link to={firstOrNotCourse == true ? "/CreateNotes" : "/"}>Create notes</Link></button>
       <button><Link to="/ListNotes">List notes</Link></button>
       <button><Link to="/AddCourses">Add courses</Link></button>
+      <div onClick={() => console.log(courses)}>
+        Testi
+      </div>
     </>
   )
 }
