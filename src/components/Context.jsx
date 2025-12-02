@@ -1,4 +1,4 @@
-import { createContext, useState } from "react";
+import { createContext, useState, useEffect } from "react";
 
 export const courseContext = createContext()
 
@@ -24,6 +24,7 @@ export function CourseProvider({ children }) {
   const importCourseData = (course) => {
     setCourses(prev => [...prev, ...course])
   }
+
 
   return (
     <courseContext.Provider value={{
