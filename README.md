@@ -1,6 +1,8 @@
 ## Ohjelman toiminta
 Ohjelmassa on kolme nappia aloitussivulla, joista pääsee napaseissa lukeviin sivuille. Näillä sivuilla voi tehdä asioita kuten lisätä kursseja, näyttää muistiinpanoja ja lisätä muistiinpanoja.
 
+Muistiinpanojen listaus näkymässä pystyy poistaa muistiinpanoja, mutta se ei heti näy eli täytyy esim. vaihtaa kurssista toiseen jotta poistettu muistiinpano ei näy.
+
 ## Kehitysversion ohjeet
 ```javascript Javascript
 Aluksi:
