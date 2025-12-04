@@ -3,7 +3,7 @@ import { courseContext } from "../components/Context"
 import { useContext } from "react"
 
 function LandingPage() {
-  const { courses, firstOrNotCourse, notes } = useContext(courseContext)
+  const { firstOrNotCourse } = useContext(courseContext)
 
   return (
     <>
@@ -12,11 +12,6 @@ function LandingPage() {
         <button className="button-85"><Link to={firstOrNotCourse == true ? "/CreateNotes" : "/"}>Create notes</Link></button>
         <button className="button-85"><Link to="/ListNotes">List notes</Link></button>
         <button className="button-85"><Link to="/AddCourses">Add courses</Link></button>
-        <div onClick={() => {
-          console.log(courses)
-          console.log(notes)
-        }}>
-        </div>
       </div>
     </>
   )

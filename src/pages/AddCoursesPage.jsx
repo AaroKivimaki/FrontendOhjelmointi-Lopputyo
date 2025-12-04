@@ -1,4 +1,4 @@
-import { useState, useContext, useEffect } from "react"
+import { useState, useContext } from "react"
 import { courseContext } from "../components/Context"
 import BackButton from "../components/backButton"
 
