@@ -6,7 +6,6 @@ function AddNotesPage() {
 
   return (
     <>
-      Add new notes here
       <AddNotesPageComponents dataFetched={dataFetched} setDataFetched={setDataFetched} />
     </>
   )

@@ -1,6 +1,10 @@
 body {
-	background-color: black;
 	color: white;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 100%;
+	background-image: url('https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExam1qN2puNWg1NTh4b2FnaXBuajloMWZhcDlld3cxYnMydmVlbTcycSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/U3qYN8S0j3bpK/giphy.gif');
 }
 
 .noteBox {
@@ -9,4 +13,121 @@ body {
 	flex-direction: column;
 	align-items: center;
 	margin-bottom: 10px;
+}
+
+.stuff {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+.stuff select {
+	margin-bottom: 5px;
+}
+
+.firstPage {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 320px;
+}
+
+.firstPage * {
+	margin: 10px;
+}
+
+.addCoursePage {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-top: 320px;
+}
+
+.addCoursePage input {
+	margin: 5px;
+}
+
+.addNotesPage {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-top: 300px;
+}
+
+.addNotesPage textarea {
+	margin: 5px;
+}
+
+h1 {
+	display: flex;
+	justify-content: center;
+	transform: translateY(200px);
+}
+
+.button-85 {
+	padding: 0.6em 2em;
+	border: none;
+	outline: none;
+	color: rgb(255, 255, 255);
+	background: #111;
+	cursor: pointer;
+	position: relative;
+	z-index: 0;
+	border-radius: 10px;
+	user-select: none;
+	-webkit-user-select: none;
+	touch-action: manipulation;
+}
+
+.button-85:before {
+	content: "";
+	background: linear-gradient(45deg,
+			#ff0000,
+			#ff7300,
+			#fffb00,
+			#48ff00,
+			#00ffd5,
+			#002bff,
+			#7a00ff,
+			#ff00c8,
+			#ff0000);
+	position: absolute;
+	top: -2px;
+	left: -2px;
+	background-size: 400%;
+	z-index: -1;
+	filter: blur(5px);
+	-webkit-filter: blur(5px);
+	width: calc(100% + 4px);
+	height: calc(100% + 4px);
+	animation: glowing-button-85 20s linear infinite;
+	transition: opacity 0.3s ease-in-out;
+	border-radius: 10px;
+}
+
+@keyframes glowing-button-85 {
+	0% {
+		background-position: 0 0;
+	}
+
+	50% {
+		background-position: 400% 0;
+	}
+
+	100% {
+		background-position: 0 0;
+	}
+}
+
+.button-85:after {
+	z-index: -1;
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background: #222;
+	left: 0;
+	top: 0;
+	border-radius: 10px;
 }
