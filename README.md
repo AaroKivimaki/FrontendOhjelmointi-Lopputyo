@@ -4,12 +4,16 @@ Ohjelmassa on kolme nappia aloitussivulla, joista pääsee napaseissa lukeviin s
 Muistiinpanojen listaus näkymässä pystyy poistaa muistiinpanoja, mutta se ei heti näy eli täytyy esim. vaihtaa kurssista toiseen jotta poistettu muistiinpano ei näy.
 
 ## Kehitysversion ohjeet
-```javascript Javascript
+```javascript npm
 Aluksi:
 npm install
 
 Sen jälkeen:
 npm run dev
+
+Buildaus moodi:
+npm run build
+npm run preview
 ```
 
 ## AI:n käyttö
