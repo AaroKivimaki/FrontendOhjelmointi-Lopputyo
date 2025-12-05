@@ -37,6 +37,11 @@ body {
 	margin: 10px;
 }
 
+.noAccessYet {
+	display: flex;
+	justify-content: center;
+}
+
 .addCoursePage {
 	display: flex;
 	flex-direction: column;

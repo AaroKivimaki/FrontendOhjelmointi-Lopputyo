@@ -13,6 +13,9 @@ function LandingPage() {
         <button className="button-85"><Link to="/ListNotes">List notes</Link></button>
         <button className="button-85"><Link to="/AddCourses">Add courses</Link></button>
       </div>
+      {firstOrNotCourse == false && <div className="noAccessYet">
+        You can get to making notes once you've added a course!
+      </div>}
     </>
   )
 }
